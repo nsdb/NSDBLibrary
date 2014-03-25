@@ -1,5 +1,7 @@
 package com.nsdb;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Calendar;
 
 import android.content.Context;
@@ -60,5 +62,20 @@ public class StringUtils {
 			}
 		}
 	}
+	
+	public static String getStringFromStream(InputStreamReader isr) throws Exception {
+
+		BufferedReader br=new BufferedReader(isr);
+		String result="";
+		String temp=br.readLine();
+		while(temp!=null) {
+			result+=temp;
+			temp="\n"+br.readLine();
+		}
+		
+		return result;
+		
+	}
+	
 	
 }
