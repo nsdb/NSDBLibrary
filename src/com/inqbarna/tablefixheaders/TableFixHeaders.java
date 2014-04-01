@@ -40,15 +40,22 @@ import android.widget.Scroller;
  * This view shows a table which can scroll in both directions. Also still
  * leaves the headers fixed.
  * 
- * NSDB : 추가변경점 - R.id를 사용하는 부분을 상수로 변경, shadow 관련 코드 삭제
+ * NSDB : 추가변경점 - R.id를 사용하는 부분을 내부 객체로 변경, shadow 관련 코드 삭제
  * 
  * @author Brais Gab�n (InQBarna)
  */
 public class TableFixHeaders extends ViewGroup {
-	
-	private final static int ID_TAG_TYPE_VIEW = 0x888888;
-	private final static int ID_TAG_ROW = 0x888889;
-	private final static int ID_TAG_COLUMN = 0x888890;
+
+	private static class ItemViewTag {
+		public int itemViewType;
+		public int row;
+		public int column;
+		public ItemViewTag(int itemViewType,int row,int column) {
+			this.itemViewType=itemViewType;
+			this.row=row;
+			this.column=column;
+		}
+	}
 	
 	private int currentX;
 	private int currentY;
@@ -439,7 +446,7 @@ public class TableFixHeaders extends ViewGroup {
 	public void removeView(View view) {
 		super.removeView(view);
 
-		final int typeView = (Integer) view.getTag(ID_TAG_TYPE_VIEW);
+		final int typeView = ((ItemViewTag)view.getTag()).itemViewType;
 		if (typeView != TableAdapter.IGNORE_ITEM_VIEW_TYPE) {
 			recycler.addRecycledView(view, typeView);
 		}
@@ -692,8 +699,8 @@ public class TableFixHeaders extends ViewGroup {
 	protected boolean drawChild(Canvas canvas, View child, long drawingTime) {
 		final boolean ret;
 
-		final Integer row = (Integer) child.getTag(ID_TAG_ROW);
-		final Integer column = (Integer) child.getTag(ID_TAG_COLUMN);
+		final Integer row = ((ItemViewTag)child.getTag()).row;
+		final Integer column = ((ItemViewTag)child.getTag()).column;
 		// row == null => Shadow view
 		if (row == null || (row == -1 && column == -1)) {
 			ret = super.drawChild(canvas, child, drawingTime);
@@ -722,9 +729,7 @@ public class TableFixHeaders extends ViewGroup {
 			recycledView = recycler.getRecycledView(itemViewType);
 		}
 		final View view = adapter.getView(row, column, recycledView, this);
-		view.setTag(ID_TAG_TYPE_VIEW, itemViewType);
-		view.setTag(ID_TAG_ROW, row);
-		view.setTag(ID_TAG_COLUMN, column);
+		view.setTag(new ItemViewTag(itemViewType,row,column));
 		view.measure(MeasureSpec.makeMeasureSpec(w, MeasureSpec.EXACTLY), MeasureSpec.makeMeasureSpec(h, MeasureSpec.EXACTLY));
 		addTableView(view, row, column);
 		return view;
