@@ -34,7 +34,7 @@ public class LineWidthSettingSpinner extends LinearLayout implements OnClickList
 
 	private void init() {
 		int dp5 = Math.round(5*getResources().getDisplayMetrics().density);
-		setPadding(dp5,dp5,dp5,dp5);
+		setPadding(dp5,0,dp5,0);
 		setBackgroundColor(0xFFFFFFFF);
 		
 		lineWidth=LINE_WIDTH_LIST[0];
