@@ -1,4 +1,4 @@
-package com.nsdb.spinner;
+package com.nsdb.setting;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -8,7 +8,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 
-import com.nsdb.spinner.ListPopupWindow.OnPopupItemClickListener;
+import com.nsdb.popup.ListPopupWindow;
+import com.nsdb.popup.ListPopupWindow.OnPopupItemClickListener;
 
 /**
  * 선의 굵기를 선택할 수 있는 Spinner 형식의 뷰

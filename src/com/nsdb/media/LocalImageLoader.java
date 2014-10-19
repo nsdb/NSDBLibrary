@@ -1,4 +1,4 @@
-package com.nsdb.view;
+package com.nsdb.media;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

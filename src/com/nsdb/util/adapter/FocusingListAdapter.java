@@ -1,4 +1,4 @@
-package com.nsdb.adapter;
+package com.nsdb.util.adapter;
 
 import java.util.ArrayList;
 import java.util.List;

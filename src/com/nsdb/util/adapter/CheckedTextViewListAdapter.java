@@ -1,4 +1,4 @@
-package com.nsdb.adapter;
+package com.nsdb.util.adapter;
 
 import android.content.Context;
 import android.view.ContextThemeWrapper;

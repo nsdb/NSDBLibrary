@@ -1,4 +1,4 @@
-package com.nsdb.assistant;
+package com.nsdb.util.assistant;
 
 import android.content.Context;
 import android.view.View;

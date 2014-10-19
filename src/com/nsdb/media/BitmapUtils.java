@@ -1,4 +1,4 @@
-package com.nsdb;
+package com.nsdb.media;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

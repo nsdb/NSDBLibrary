@@ -1,4 +1,4 @@
-package com.nsdb.movie;
+package com.nsdb.media;
 
 import android.annotation.TargetApi;
 import android.content.Context;

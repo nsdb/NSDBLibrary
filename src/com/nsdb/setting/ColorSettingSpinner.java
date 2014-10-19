@@ -1,4 +1,4 @@
-package com.nsdb.spinner;
+package com.nsdb.setting;
 
 import android.content.Context;
 import android.util.AttributeSet;

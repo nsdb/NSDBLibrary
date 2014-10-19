@@ -1,4 +1,4 @@
-package com.nsdb;
+package com.nsdb.popup;
 
 import android.app.Activity;
 import android.app.AlertDialog;

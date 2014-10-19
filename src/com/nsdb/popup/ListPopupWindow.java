@@ -1,4 +1,4 @@
-package com.nsdb.spinner;
+package com.nsdb.popup;
 
 import java.util.ArrayList;
 
@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.FrameLayout.LayoutParams;
 
 public class ListPopupWindow {
 
@@ -20,6 +19,7 @@ public class ListPopupWindow {
 	private int offsetX, offsetY;
 	private OnPopupItemClickListener listener;
 	
+	@SuppressWarnings("deprecation")
 	public ListPopupWindow(Context c) {
 		viewList = new ArrayList<View>();
 		listLayout = new LinearLayout(c);

@@ -1,4 +1,4 @@
-package com.nsdb;
+package com.nsdb.util;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

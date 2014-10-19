@@ -1,4 +1,4 @@
-package com.nsdb;
+package com.nsdb.popup;
 
 import android.content.Context;
 import android.widget.Toast;
