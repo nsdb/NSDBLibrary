@@ -1,8 +1,5 @@
 package com.nsdb.cm.setting;
 
-import com.nsdb.cm.popup.ListPopupWindow;
-import com.nsdb.cm.popup.ListPopupWindow.OnPopupItemClickListener;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -10,6 +7,9 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
+
+import com.nsdb.cm.popup.ListPopupWindow;
+import com.nsdb.cm.popup.ListPopupWindow.OnPopupItemClickListener;
 
 
 /**

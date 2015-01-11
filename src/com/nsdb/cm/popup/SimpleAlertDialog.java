@@ -106,7 +106,7 @@ public class SimpleAlertDialog {
 	
 	
 	/**
-	 * 3개의 선택지가 주어지는 AlertDialog를 생성합니다. cancel이 불가능합니다.
+	 * 3개의 선택지가 주어지는 AlertDialog를 생성합니다. 취소가 불가능합니다.
 	 * @param context 컨텍스트
 	 * @param msg 문자열 ID
 	 * @param poMsg 1번째 버튼 문자열 ID

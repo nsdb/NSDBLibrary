@@ -1,11 +1,11 @@
 package com.nsdb.cm.media;
 
-import com.nsdb.cm.util.BaseThreadingProcessor;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.provider.MediaStore;
 import android.widget.ImageView;
+
+import com.nsdb.cm.util.BaseThreadingProcessor;
 
 public class ThumbSetter extends BaseThreadingProcessor<ThumbSetter.RequestData> {
 

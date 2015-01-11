@@ -19,6 +19,8 @@ package com.inqbarna.tablefixheaders.adapters;
 import android.database.DataSetObservable;
 import android.database.DataSetObserver;
 
+import com.inqbarna.tablefixheaders.TableFixHeaders;
+
 /**
  * Common base class of common implementation for an {@link TableAdapter} that
  * can be used in {@link TableFixHeaders}.

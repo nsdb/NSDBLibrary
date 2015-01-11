@@ -29,6 +29,9 @@ public class ImageStorage {
 		
 		/** 그룹의 이름 (폴더 구분을 쉽게) */
 		public String bucketName;
+		
+		/** 사진이 찍힌 날짜 */
+		public long createdDate;
 	}
 	
 	/** 데이터 리스트<br>
@@ -55,6 +58,7 @@ public class ImageStorage {
 				MediaStore.Images.Media.DISPLAY_NAME,
 				MediaStore.Images.Media.BUCKET_ID,
 				MediaStore.Images.Media.BUCKET_DISPLAY_NAME,
+				MediaStore.Images.Media.DATE_ADDED,
 				};
 		Uri images = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
 		String sortOrder = MediaStore.Images.Media.BUCKET_ID + " ASC, " + MediaStore.Images.Media.DATE_TAKEN+" DESC";
@@ -75,6 +79,7 @@ public class ImageStorage {
 				output.pictureName = cur.getString(1);
 				output.bucketId = cur.getLong(2);
 				output.bucketName = cur.getString(3);
+				output.createdDate = cur.getLong(4) * 1000;
 				
 				// new folder
 				if(currentBucketId != output.bucketId) {

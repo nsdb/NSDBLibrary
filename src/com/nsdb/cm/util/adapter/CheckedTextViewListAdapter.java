@@ -9,7 +9,10 @@ import android.widget.CheckedTextView;
 
 /**
  * CheckedTextView를 이용한 리스트뷰를 쉽게 생성하기 위한 아답터입니다.<br>
- * 일반적으로 ListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE)을 겸하여 사용합니다. 잊고 넘어가지 않았는지 확인하십시요.
+ * 일반적으로 ListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE)을 겸하여 사용합니다. 잊고 넘어가지 않았는지 확인하십시요.<br>
+ * position을 직접 정할때는 ListView.setItemChecked(int, boolean)을 사용,(setSelection(int)는 안통함)<br>
+ * position을 얻을 때는 ListView.getCheckedItemPosition()을 사용.
+ 
  * @author NSDB
  *
  */

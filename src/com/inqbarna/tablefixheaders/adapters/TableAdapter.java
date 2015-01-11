@@ -20,6 +20,8 @@ import android.database.DataSetObserver;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.inqbarna.tablefixheaders.TableFixHeaders;
+
 /**
  * The TableAdapter object acts as a bridge between an TableFixHeaders and the
  * underlying data for that view. The Adapter provides access to the data items.
